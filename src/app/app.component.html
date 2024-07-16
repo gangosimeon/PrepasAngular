@@ -1,21 +1,18 @@
+<header>
+  <nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+      <a routerLink="auth">Authentification</a>
+      <a routerLink="appareils">Appareils</a>
+      <a routerLink="edit">Nouvel appareil</a>
+      <a routerLink="users">Utilisateurs</a>
+    </ul>
+    <div class="navbar-rigth">
+      <p>Vous êtes connectés depuis {{second}} secondes</p>
+    </div>
+  </nav>
+</header>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
-      <h2>Mes appareils</h2>
-      <p>Dernière mise à jour : {{ derniereDate|async}}</p>
-      <ul class="list-group">
-        <app-appareils *ngFor="let appareil of appareils;let i=index"
-                        [appareilIndex]="i"
-                        [appareilNom]="appareil.nom" 
-                        [appareilEtat]="appareil.etat"></app-appareils>
-      </ul>
-      <button class="btn btn-success" 
-        (click)="onAllumer()"
-        >Tout allumer</button>
-
-      <button class="btn btn-danger"
-        (click)="onEteindre()"
-      >Tout éteindre</button>
-    </div>
+   <router-outlet></router-outlet>
   </div>
 </div>

@@ -4,6 +4,7 @@
     <div style="width: 20px; height:20px ;background-color: red;" *ngIf="appareilEtat==='éteint'">
     </div>
     <h2 [ngStyle]="{color:getColor()}">appareil : {{appareilNom}} == Etat: {{ getStatus() }}</h2>   
+    <a [routerLink]="[appareilId]">Details</a>
     <button class="btn btn-success"
             (click)="onSwitchOn()" [disabled]="appareilEtat==='allumé'"
     >Allumer </button>

@@ -9,7 +9,8 @@ import { AppareilService } from '../services/appareil.services';
 export class AppareilsComponent implements OnInit{
   @Input() appareilNom! : string;
   @Input() appareilEtat!:string;
-  @Input() appareilIndex!:number;  
+  @Input() appareilIndex!:number;
+  @Input() appareilId!:number;
   constructor(private appareilService:AppareilService){}
   ngOnInit() {
   }
